@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{status}}</title>
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="/static/css/styles2.css">
+    <script src="/static/js/jquery-1.8.3.min.js"></script>
+    <!--[if IE]>
+    <script src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="jq22-container" style="padding-top:100px">
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1"
+                                                                                     class="tab">{{status}}</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="group">
+                        <nobr><label for="user" class="label">昵称</label>
+                            <input id="user" type="text" class="input" placeholder="不填写将随机昵称" ></nobr>
+                    </div>
+                    <div class="group">
+                        <label for="gender" class="label">性别</label>
+                            <input class="gender" type="radio" checked="checked" name="2" value="1">男
+                            <input class="gender" type="radio" name="2" value="2">女
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign In">
+                    </div>
+                    <div class="foot-lnk">
+                        <a href="#forgot">点击返回登陆页</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
