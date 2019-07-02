@@ -6,11 +6,13 @@ from models import Article, Category, Tag, Status, Secret
 from App import db, uid
 from sqlalchemy import and_, func
 from App.basefunc import get_counts_lid, json_mysql
-from . import sercet
+from . import news
 
-@sercet.route('/sercet', methods=['GET'])
-def blog():
+
+
+@news.route('/news', methods=['GET'])
+def news():
     categorys = db.session.query(Category).filter(Category.info == 'python').all()
-    secrets = db.session.query(Secret).filter().all()
+    articles = db.session.query(Article).filter(Article.category_id==7).limit(10).all()
 
-    return render_template('sercet.html')
+    return render_template('news.html',cat=categorys,art=articles)
