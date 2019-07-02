@@ -17,4 +17,5 @@ def get_index():
     tags = db.session.query(Tag).all()
     status = db.session.query(Status).all()
     secret = db.session.query(Secret).all()
+
     return render_template('index.html', art=articles, cat=categorys, tag=tags, sta=status,sec=secret)
