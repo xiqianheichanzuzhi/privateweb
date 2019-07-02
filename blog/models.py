@@ -136,10 +136,39 @@ class Secret(db.Model):
     secret_title= db.Column(db.String(300), unique=False)
     secret_desc = db.Column(db.String(64), nullable=True)
     secret_content= db.Column(db.String(300), unique=False)
-    secret_img = db.Column(db.String(99), unique=False, default=None)
+    secret_img = db.Column(db.String(9999), unique=False, default=None)
     create_time = db.Column(db.DateTime, nullable=True, default=datetime.now)
 
 
+class News(db.Model):
+    __tablename__ = "News"
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    news_cate = db.Column(db.String(300), unique=False)
+    news_title= db.Column(db.String(300), unique=False)
+    news_desc = db.Column(db.String(64), nullable=True)
+    news_content= db.Column(db.String(9999), unique=False)
+    news_img = db.Column(db.String(9999), unique=False, default=None)
+    news_imgcounts = db.Column(db.Integer, unique=False, default=None)
+    news_paltform  = db.Column(db.String(64), nullable=True)
+    news_author =  db.Column(db.String(64), nullable=True)
+    news_readcounts = db.Column(db.String(64), nullable=True)
+    crawled_time = db.Column(db.DateTime, nullable=True, default=datetime.now)
+    create_time = db.Column(db.DateTime, nullable=True, default=datetime.now)
+    def __repr__(self):
+        return '<User %r>' % self.id
+
+    def __init__(self, id, news_cate,news_title, news_desc, news_content,news_img, news_imgcounts, news_paltform,
+                 news_author,crawled_time,create_time):
+        self.news_cate = news_cate
+        self.news_title = news_title
+        self.news_desc = news_desc
+        self.news_content = news_content
+        self.news_img = news_img
+        self.news_imgcounts = news_imgcounts
+        self.news_paltform = news_paltform
+        self.news_author = news_author
+        self.crawled_time = crawled_time
+        self.create_time = create_time
 
 
 db.create_all(app=create_app())

@@ -384,3 +384,21 @@ margin: auto }
 .timebox li i:before { content: " "; height: 10px; width: 10px; border: 2px solid #cccaca; background: #fff; position: absolute; top: 4px; left: -26px; border-radius: 50%; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease; }
 .timebox li:hover i:before { background: #080808 }
 .pagelist.mt20 { margin-top: 20px; }
+/*加载*/
+.ajax-loading {
+    display: none;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    margin: auto;
+}
+.load_btn {
+    text-shadow: 15px -10px 20px 0px black;
+    font-size: 16px;
+    color: cadetblue;
+    margin: 0 auto;
+    padding: 0;
+    border: cadetblue;
+    display: block;
+    background-color: aliceblue;
+}

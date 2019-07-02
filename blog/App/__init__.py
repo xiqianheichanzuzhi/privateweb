@@ -30,8 +30,8 @@ def create_app():
     app.register_blueprint(blueprint=sercet)  # 将app交由blue管理    福利
     from App.mypython import views,mypython
     app.register_blueprint(blueprint=mypython)  # 将app交由blue管理    python
-    from App.daohang import views,daohang
-    app.register_blueprint(blueprint=daohang)  # 将app交由blue管理    慢慢长路
+    from App.news import views,news
+    app.register_blueprint(blueprint=news)  # 将app交由blue管理    新闻
     ''':exception flask_admin部分'''
     admin = Admin(app, name='web', template_mode='bootstrap3')
     db.init_app(app)
